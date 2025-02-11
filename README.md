@@ -17,6 +17,10 @@ This project is a RESTful API built with FastAPI for managing a book collection.
 
 ```
 fastapi-book-project/
+|-- .github/
+|      |-- workflows/
+|             |---ci.yml
+|
 ├── api/
 │   ├── db/
 │   │   ├── __init__.py
