@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 name: deploy
-=======
-name: Deploy Application
-
->>>>>>> 1d6d4094d21351b1eaaf224e357f3f4cce7a2e4e
 on:
   push:
     branches:
       - main
-<<<<<<< HEAD
 jobs:
   deploy:
     name: deploy
@@ -23,21 +17,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/fastabproject_HNG_stage2
+            cd /home/ubuntu/fastapi-book-project
             git pull origin main
-            source env/bin/activate
+            source venv/bin/activate
             pip install -r requirements.txt
             sudo systemctl restart fastapi
-=======
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Deploy
-        run: |
-         ssh user@server-ip "cd /path/to/app && git pull && pkill -f 'uvicorn' && nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > app.log 2>&1 &"
->>>>>>> 1d6d4094d21351b1eaaf224e357f3f4cce7a2e4e
