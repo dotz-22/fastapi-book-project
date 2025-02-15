@@ -20,6 +20,7 @@ fastapi-book-project/
 |-- .github/
 |      |-- workflows/
 |             |---ci.yml
+|             |---cd.yml
 |
 ├── api/
 │   ├── db/
@@ -36,6 +37,9 @@ fastapi-book-project/
 │   ├── __init__.py
 │   └── test_books.py       # API endpoint tests
 ├── main.py                 # Application entry point
+|-- nginx/
+|      |---nginx.conf
+|
 ├── requirements.txt        # Project dependencies
 └── README.md
 ```
